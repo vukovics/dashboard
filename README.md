@@ -2,6 +2,8 @@
 
 A mini SaaS project management dashboard built with Next.js 15, Tailwind CSS, and Supabase.
 
+**Live Demo**: [https://dashboard-alpha-one-22.vercel.app](https://dashboard-alpha-one-22.vercel.app/login)
+
 ## Features
 
 - **Authentication**: Sign up, sign in, and logout with Supabase Auth
@@ -141,6 +143,10 @@ src/
 │   └── validations.ts      # Zod schemas
 └── middleware.ts           # Auth middleware
 ```
+
+## Other Projects
+
+Check out [Brand Echo](https://brand-echo.ai/) - an AI-powered platform for brand monitoring and social listening. If you're interested in working together or exploring similar solutions, feel free to reach out!
 
 ## License
 
