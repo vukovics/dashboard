@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
-import { supabase } from '@/lib/supabase';
+import { createSupabaseServerClient } from '@/lib/supabase-server';
 import { projectSchema } from '@/lib/validations';
 
 export async function GET(request: NextRequest) {
+  const supabase = await createSupabaseServerClient();
   const searchParams = request.nextUrl.searchParams;
   const status = searchParams.get('status');
   const search = searchParams.get('search');
@@ -28,6 +29,8 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const supabase = await createSupabaseServerClient();
+
   let body: unknown;
   try {
     body = await request.json();
